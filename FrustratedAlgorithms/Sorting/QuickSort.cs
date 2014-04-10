@@ -10,7 +10,10 @@ namespace FrustratedAlgorithms.Sorting
     {
         public static void Sort(List<int> array)
         {
-            Sort(array, 0, array.Count() - 1);
+            int[] arrayint = Quicksort(array.ToArray(), 0, array.Count() - 1);
+            array.Clear();
+            array.AddRange(arrayint);
+            //Sort(array, 0, array.Count() - 1);
         }
 
         private static void Sort(List<int> array, int left, int right)
@@ -54,6 +57,49 @@ namespace FrustratedAlgorithms.Sorting
                 array[left] = array[right];
                 array[right] = temp;
             }
+        }
+
+
+        private static int[] Quicksort(int[] elements, int left, int right)
+        {
+            int i = left, j = right;
+            int pivot = elements[(left + right) / 2];
+
+            while (i <= j)
+            {
+                while (elements[i].CompareTo(pivot) < 0)
+                {
+                    i++;
+                }
+
+                while (elements[j].CompareTo(pivot) > 0)
+                {
+                    j--;
+                }
+
+                if (i <= j)
+                {
+                    // Swap
+                    int tmp = elements[i];
+                    elements[i] = elements[j];
+                    elements[j] = tmp;
+
+                    i++;
+                    j--;
+                }
+            }
+
+            // Recursive calls
+            if (left < j)
+            {
+                Quicksort(elements, left, j);
+            }
+
+            if (i < right)
+            {
+                Quicksort(elements, i, right);
+            }
+            return elements;
         }
     }
 }

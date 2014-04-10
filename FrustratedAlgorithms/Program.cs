@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FrustratedAlgorithms.Arrays;
 using FrustratedAlgorithms.Sorting;
+using System.Diagnostics;
 
 namespace FrustratedAlgorithms
 {
@@ -12,24 +13,42 @@ namespace FrustratedAlgorithms
     {
         static void Main(string[] args)
         {
-            QuickSort.Sort(MyRandom.Random(10, 100));
-            int result = FindKthLargestInArray.Find(MyRandom.Random(10, 100), 10);
-
-            // Create an unsorted array of string elements
-            string[] unsorted = { "z", "e", "x", "c", "m", "q", "a" };
+            int size = 10000000;
             
-            // Sort the array
-            Quicksort(unsorted, 0, unsorted.Length - 1);
-
-            // Print the sorted array
-            for (int i = 0; i < unsorted.Length; i++)
+            for (int i = 10; i < size; )
             {
-                Console.Write(unsorted[i] + " ");
-            }
+                // Create new stopwatch
+                Stopwatch stopwatch = new Stopwatch();
+                // Begin timing
+            
+                stopwatch.Start();
 
+                List<int> input = MyRandom.Random(i, i);
+                QuickSort.Sort(input);
+                // Stop timing
+                stopwatch.Stop();
+
+                // Write result
+                Console.WriteLine(" for input: {0} Time elapsed : {1}", i,
+                    stopwatch.Elapsed);
+
+                i = i * 10;
+            }
+            
+            //int result = FindKthLargestInArray.Find(MyRandom.Random(10, 100), 10);
+            
             Console.WriteLine();
 
             Console.ReadLine();
+        }
+
+        public static void sortstrings()
+        {
+            // Create an unsorted array of string elements
+            string[] unsorted = { "z", "e", "x", "c", "m", "q", "a" };
+
+            // Sort the array
+            Quicksort(unsorted, 0, unsorted.Length - 1);
         }
 
 
