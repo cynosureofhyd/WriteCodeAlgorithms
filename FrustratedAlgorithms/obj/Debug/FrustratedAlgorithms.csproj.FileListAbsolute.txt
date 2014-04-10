@@ -1,0 +1,6 @@
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\bin\Debug\FrustratedAlgorithms.exe.config
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\bin\Debug\FrustratedAlgorithms.exe
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\bin\Debug\FrustratedAlgorithms.pdb
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\obj\Debug\FrustratedAlgorithms.csprojResolveAssemblyReference.cache
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\obj\Debug\FrustratedAlgorithms.exe
+c:\users\prashmaya\documents\visual studio 2013\Projects\FrustratedAlgorithms\FrustratedAlgorithms\obj\Debug\FrustratedAlgorithms.pdb
