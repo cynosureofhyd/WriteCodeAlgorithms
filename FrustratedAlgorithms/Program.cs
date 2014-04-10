@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FrustratedAlgorithms.Arrays;
+using FrustratedAlgorithms.Sorting;
 
 namespace FrustratedAlgorithms
 {
@@ -11,13 +12,12 @@ namespace FrustratedAlgorithms
     {
         static void Main(string[] args)
         {
+            QuickSort.Sort(MyRandom.Random(10, 100));
             int result = FindKthLargestInArray.Find(MyRandom.Random(10, 100), 10);
 
             // Create an unsorted array of string elements
             string[] unsorted = { "z", "e", "x", "c", "m", "q", "a" };
-
-            int[] intarray = MyRandom.Random(10, 100).ToArray();
-
+            
             // Sort the array
             Quicksort(unsorted, 0, unsorted.Length - 1);
 
